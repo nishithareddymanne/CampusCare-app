@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Complaints | CampusCare</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d448f'/%3E%3Cpath d='M32 12l18 7v14c0 10-8 17-18 21-10-4-18-11-18-21V19z' fill='none' stroke='white' stroke-width='4' stroke-linejoin='round'/%3E%3Cpath d='M24 33l6 6 11-12' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="my-complaints">
+<div class="app">
+  <aside class="sidebar" id="sidebar" aria-label="Sidebar"></aside>
+  <div class="overlay" id="overlay"></div>
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" data-icon="menu" data-size="22"></button>
+      <h1 id="pageTitle">My Complaints</h1>
+      <div class="topbar-user" id="topUser"></div>
+    </header>
+    <section class="content">
+      <div class="page-head"><h2>My complaints</h2><p class="muted">Every complaint you have submitted, with its latest status and remark.</p></div>
+      <div class="toolbar">
+        <div class="search"><span data-icon="search" data-size="18"></span><input id="q" type="search" placeholder="Search by ID or title" aria-label="Search complaints"></div>
+        <select id="statusFilter" aria-label="Filter by status"><option value="">All statuses</option><option value="PENDING">Pending</option><option value="ASSIGNED">Assigned</option><option value="IN_PROGRESS">In Progress</option><option value="RESOLVED">Resolved</option><option value="REJECTED">Rejected</option></select>
+        <select id="categoryFilter" aria-label="Filter by category"><option value="">All categories</option><option value="CLASSROOM">Classroom</option><option value="HOSTEL">Hostel</option><option value="LABORATORY">Laboratory</option><option value="FACILITIES">Facilities</option></select>
+      </div>
+      <div id="list"></div>
+    </section>
+  </main>
+</div>
+<script src="/js/api.js"></script>
+<script src="/js/auth.js"></script>
+<script src="/js/complaints.js"></script>
+</body>
+</html>

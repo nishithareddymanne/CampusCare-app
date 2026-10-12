@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campus Complaint & Issue Management | CampusCare</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d448f'/%3E%3Cpath d='M32 12l18 7v14c0 10-8 17-18 21-10-4-18-11-18-21V19z' fill='none' stroke='white' stroke-width='4' stroke-linejoin='round'/%3E%3Cpath d='M24 33l6 6 11-12' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="landing">
+<header class="nav-top">
+  <div class="container">
+    <a class="brand" href="/"><span class="logo" data-icon="shield" data-size="20"></span><span>Campus<b>Care</b></span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#features">Features</a><a href="#how">How it works</a><a href="#tracking">Tracking</a><a href="#contact">Contact</a>
+      <a href="/login.html" id="navLogin">Log in</a>
+      <a class="btn btn-primary btn-sm" id="navCta" href="/register.html">Get Started</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div>
+      <h1>Report campus problems. Watch them get fixed.</h1>
+      <p class="lead">CampusCare gives students one place to report broken projectors, leaking taps and faulty lab equipment, and gives administrators a clear queue to route and resolve them.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg js-start" href="/register.html">Get Started</a>
+        <a class="btn btn-ghost btn-lg" href="#how">See how it works</a>
+      </div>
+    </div>
+    <div class="tracker" aria-label="Example of a tracked complaint">
+      <div class="tracker-head"><div><strong>Projector not working, Room 204</strong><small>Classroom &middot; Block B</small></div><span class="badge st-IN_PROGRESS">In Progress</span></div>
+      <ol class="timeline">
+        <li style="--dot:#10a56f"><div class="tl-title">Submitted <span class="badge st-PENDING">Pending</span></div><div class="tl-meta">Student &middot; Mon, 9:12 AM</div></li>
+        <li style="--dot:#3b82f6"><div class="tl-title">Assigned <span class="badge st-ASSIGNED">Assigned</span></div><div class="tl-remark">Routed to Maintenance.</div><div class="tl-meta">Admin &middot; Mon, 11:40 AM</div></li>
+        <li style="--dot:#7c4dff"><div class="tl-title">Work started <span class="badge st-IN_PROGRESS">In Progress</span></div><div class="tl-remark">Replacement lamp ordered.</div><div class="tl-meta">Admin &middot; Tue, 10:05 AM</div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="features">
+  <div class="container">
+    <div class="section-head"><h2>Built for the way a campus actually works</h2><p class="muted">Simple for students, structured for administrators.</p></div>
+    <div class="features">
+      <div class="feature"><div class="stat-icon" data-icon="file" data-size="22"></div><h3>Quick complaint form</h3><p class="muted">Title, category, location and an optional photo. Takes about a minute.</p></div>
+      <div class="feature"><div class="stat-icon" data-icon="activity" data-size="22"></div><h3>Live status tracking</h3><p class="muted">See whether a complaint is pending, assigned, in progress or resolved.</p></div>
+      <div class="feature"><div class="stat-icon" data-icon="send" data-size="22"></div><h3>Department routing</h3><p class="muted">Administrators assign each complaint to Maintenance, Hostel, Laboratory or Facilities.</p></div>
+      <div class="feature"><div class="stat-icon" data-icon="history" data-size="22"></div><h3>Full history</h3><p class="muted">Every status change is recorded with who made it, when, and why.</p></div>
+      <div class="feature"><div class="stat-icon" data-icon="layers" data-size="22"></div><h3>Admin dashboard</h3><p class="muted">Charts by category, department and status show where problems pile up.</p></div>
+      <div class="feature"><div class="stat-icon" data-icon="lock" data-size="22"></div><h3>Private by design</h3><p class="muted">Students only see their own complaints. Administrator tools are locked to administrators.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="how">
+  <div class="container">
+    <div class="section-head"><h2>How it works</h2><p class="muted">From report to resolution in four steps.</p></div>
+    <div class="steps">
+      <div class="step"><h3>Register</h3><p class="muted">Create a student account with your college email.</p></div>
+      <div class="step"><h3>Raise a complaint</h3><p class="muted">Describe the issue, pick a category and add a photo if it helps.</p></div>
+      <div class="step"><h3>Admin assigns it</h3><p class="muted">An administrator routes it to the responsible department.</p></div>
+      <div class="step"><h3>Follow it to resolution</h3><p class="muted">Read each remark as the work progresses until it is resolved.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="tracking">
+  <div class="container">
+    <div class="section-head"><h2>Know where your complaint stands</h2><p class="muted">Every complaint moves through the same clear stages. A resolved complaint stays resolved, and a rejected one always comes with a reason.</p></div>
+    <div class="track-flow">
+      <span class="badge st-PENDING">Pending</span><span class="sep">&rsaquo;</span>
+      <span class="badge st-ASSIGNED">Assigned</span><span class="sep">&rsaquo;</span>
+      <span class="badge st-IN_PROGRESS">In Progress</span><span class="sep">&rsaquo;</span>
+      <span class="badge st-RESOLVED">Resolved</span>
+      <span class="muted" style="margin-left:1rem">or</span> <span class="badge st-REJECTED">Rejected</span>
+    </div>
+    <p class="muted">Open <strong>My Complaints</strong> after logging in to search, filter and view the complete timeline of any complaint.</p>
+    <a class="btn btn-primary js-start" href="/register.html">Get Started</a>
+  </div>
+</section>
+
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="cols">
+      <div><a class="brand" href="/"><span class="logo" data-icon="shield" data-size="20"></span><span>Campus<b>Care</b></span></a><p>Campus Complaint &amp; Issue Management System. A college project.</p></div>
+      <div><h4>Contact</h4><ul>
+        <li><span data-icon="mail" data-size="16"></span> support@campuscare.edu</li>
+        <li><span data-icon="phone" data-size="16"></span> +91 00000 00000</li>
+        <li><span data-icon="pin" data-size="16"></span> Student Affairs Office, Administrative Block</li></ul></div>
+      <div><h4>Quick links</h4><ul><li><a href="/login.html">Log in</a></li><li><a href="/register.html">Student registration</a></li><li><a href="#how">How it works</a></li></ul></div>
+    </div>
+    <div class="copy">&copy; 2026 CampusCare. All rights reserved.</div>
+  </div>
+</footer>
+<script src="/js/api.js"></script>
+<script src="/js/auth.js"></script>
+</body>
+</html>

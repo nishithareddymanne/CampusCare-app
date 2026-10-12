@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raise Complaint | CampusCare</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d448f'/%3E%3Cpath d='M32 12l18 7v14c0 10-8 17-18 21-10-4-18-11-18-21V19z' fill='none' stroke='white' stroke-width='4' stroke-linejoin='round'/%3E%3Cpath d='M24 33l6 6 11-12' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="raise-complaint">
+<div class="app">
+  <aside class="sidebar" id="sidebar" aria-label="Sidebar"></aside>
+  <div class="overlay" id="overlay"></div>
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" data-icon="menu" data-size="22"></button>
+      <h1 id="pageTitle">Raise Complaint</h1>
+      <div class="topbar-user" id="topUser"></div>
+    </header>
+    <section class="content">
+      <div class="page-head"><h2>Raise a complaint</h2><p class="muted">Describe the problem and where it is. An administrator will route it to the right department.</p></div>
+      <div class="card form-card">
+        <div id="successBox" class="success-box hidden"></div>
+        <div id="formWrap">
+          <form id="complaintForm" novalidate>
+            <div id="formAlert"></div>
+            <div class="field"><label for="title">Complaint title</label><input id="title" name="title" maxlength="150" placeholder="e.g. Projector not working in Room 204"><div class="field-error" data-error-for="title"></div></div>
+            <div class="form-row">
+              <div class="field"><label for="category">Category</label>
+                <select id="category" name="category"><option value="">Select category…</option><option value="CLASSROOM">Classroom</option><option value="HOSTEL">Hostel</option><option value="LABORATORY">Laboratory</option><option value="FACILITIES">Facilities</option></select>
+                <div class="field-error" data-error-for="category"></div></div>
+              <div class="field"><label for="location">Campus location</label><input id="location" name="location" maxlength="150" placeholder="e.g. Block B, 2nd floor"><div class="field-error" data-error-for="location"></div></div>
+            </div>
+            <div class="field"><label for="description">Description</label><textarea id="description" name="description" maxlength="2000" placeholder="What is wrong, and since when?"></textarea>
+              <div class="hint" id="descCount">0 / 2000</div><div class="field-error" data-error-for="description"></div></div>
+            <div class="field"><label for="image">Photograph (optional)</label>
+              <div class="dropzone" id="dropzone" tabindex="0" role="button"><span data-icon="image" data-size="28"></span><div>Click to choose a JPEG, PNG or WebP image (max 5 MB)</div></div>
+              <input id="image" name="image" type="file" accept="image/jpeg,image/png,image/webp" class="hidden">
+              <div id="preview"></div><div class="field-error" data-error-for="image"></div></div>
+            <button class="btn btn-primary" id="submitBtn" type="submit">Submit complaint</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="/js/api.js"></script>
+<script src="/js/auth.js"></script>
+<script src="/js/complaints.js"></script>
+</body>
+</html>
